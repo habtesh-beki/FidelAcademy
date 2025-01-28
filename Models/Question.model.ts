@@ -22,7 +22,7 @@ export class Question {
   body!: string;
 
   @Column()
-  tages!: string[];
+  tages!: string;
 
   @Column("simple-array", { nullable: true })
   image?: string[];
@@ -39,12 +39,6 @@ export class Question {
   @CreateDateColumn()
   createdAt!: Date;
 
-  @UpdateDateColumn()
-  updatedAt!: Date;
-
   @Column({ type: "int", default: 0 })
   answersCount!: number;
-
-  @Column({ default: false })
-  isResolved!: boolean;
 }

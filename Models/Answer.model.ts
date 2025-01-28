@@ -6,6 +6,7 @@ import {
   CreateDateColumn,
   UpdateDateColumn,
 } from "typeorm";
+
 import { User } from "./User.model";
 import { Question } from "./Question.model";
 

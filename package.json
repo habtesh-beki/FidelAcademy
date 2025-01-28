@@ -1,7 +1,7 @@
 {
   "packageManager": "pnpm@10.0.0+sha512.b8fef5494bd3fe4cbd4edabd0745df2ee5be3e4b0b8b08fa643aa3e4c6702ccc0f00d68fa8a8c9858a735a0032485a44990ed2810526c875e416f001b17df12b",
   "scripts": {
-    "start": "nodemon"
+    "start": "nodemon server.ts"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
@@ -9,6 +9,9 @@
     "ts-node": "^10.9.2"
   },
   "dependencies": {
+    "dotenv": "^16.4.7",
+    "pg": "^8.13.1",
+    "reflect-metadata": "^0.2.2",
     "typeorm": "^0.3.20"
   }
 }
