@@ -18,7 +18,6 @@ export class UserRepository {
 
   async findUser() {
     const user = await UserRepository.userRepo.find();
-
     return user;
   }
 
@@ -30,7 +29,9 @@ export class UserRepository {
 
   async create(data: UserI): Promise<User> {
     const user = UserRepository.userRepo.create(data);
-
-    return user;
+    if (!user) throw new Error("Error occured");
+    const newUser = UserRepository.userRepo.save(user);
+    if (!newUser) throw new Error("Error occured");
+    return newUser;
   }
 }
