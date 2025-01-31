@@ -5,11 +5,11 @@ export interface QuestionI {
   id: string;
   title: string;
   body: string;
-  tags: string[];
-  image: string;
-  pdf: string;
+  tags: string;
+  image?: string[];
+  pdf?: string[];
   author: UserI;
-  answer: AnswerI[];
+  answer?: AnswerI[];
   createdAt: Date;
   answersCount: number;
 }
