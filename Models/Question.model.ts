@@ -22,7 +22,7 @@ export class Question {
   body!: string;
 
   @Column()
-  tages!: string;
+  tags!: string;
 
   @Column("simple-array", { nullable: true })
   image?: string[];
@@ -31,7 +31,7 @@ export class Question {
   pdf?: string[];
 
   @ManyToOne(() => User, (user) => user.questions, { eager: true })
-  author?: User;
+  author!: User;
 
   @OneToMany(() => Answer, (answer) => answer.user)
   answers?: Answer[];
